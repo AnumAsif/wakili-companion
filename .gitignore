@@ -1,0 +1,8 @@
+virtual/
+
+.vscode/
+
+.env
+
+start.sh
+
