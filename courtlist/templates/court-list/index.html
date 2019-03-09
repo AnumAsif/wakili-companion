@@ -1,10 +1,55 @@
 {% extends 'court-list/base.html' %}
 {% load static %}
 
+
 {% block content %}
 
-    <div class="page">
-        {% include "navbar.html" %}
+        <div class="page">
+            <div class="overlay">
+            
+            {% include "navbar.html" %}
+            <div class='middle-div'>
+            <h1>WAKILI COMPANION</h1>
+                <!-- <img src="" style="width:100%;height:40%; overflow:hidden;"alt=""> -->
+            </div>
+            <div class="botton-div info-row">
+                <div class="container">
+                   <div class="card">
+                      <h3>01. Supreme Court</h3>
+                      <div class="card-icon">
+                         <img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2F4.bp.blogspot.com%2F-YaZx9KRY-GM%2FWOIj9QA8tVI%2FAAAAAAAAFD0%2FIn7TsCSQeRECAcdBF7vOOPzTWqgROaGCQCLcB%2Fs1600%2FUK%252Bsupreme%252Bcourt.jpg&f=1" alt="">
+                      </div>
+                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id repellat minima esse dolores harum fugit quidem! Adipisci debitis vero dolores illo.</p>
+                      <a href="{% url 'cause_list' %}">View Court</a>
+                   </div>
+                   <div class="card">
+                      <h3>02. Court of Appeal</h3>
+                      <div class="card-icon">
+                         <img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.magistratescourt.tas.gov.au%2F__data%2Fassets%2Fimage%2F0005%2F348179%2Fcourtroom-Hobart-250.jpg&f=1" alt="">
+                      </div>
+                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id repellat minima esse dolores harum fugit quidem! Adipisci debitis vero dolores illo.</p>
+                      <a href="{% url 'cause_list' %}">View Court</a>
+                   </div>
+                   <div class="card">
+                      <h3>03. High Court of Kenya</h3>
+                      <div class="card-icon">
+                         <img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F1%2F1d%2FHigh_court_of_Australia_-_court_2.jpg%2F1024px-High_court_of_Australia_-_court_2.jpg&f=1" alt="">
+                      </div>
+                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id repellat minima esse dolores harum fugit quidem! Adipisci debitis vero dolores illo.</p>
+                      <a href="{% url 'cause_list' %}">View Court</a>
+                   </div>
+                   <div class="card">
+                      <h3>04. Chief Magistrates Court</h3>
+                      <div class="card-icon">
+                         <img src="https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2F4.bp.blogspot.com%2F-YaZx9KRY-GM%2FWOIj9QA8tVI%2FAAAAAAAAFD0%2FIn7TsCSQeRECAcdBF7vOOPzTWqgROaGCQCLcB%2Fs1600%2FUK%252Bsupreme%252Bcourt.jpg&f=1" alt="">
+                      </div>
+                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id repellat minima esse dolores harum fugit quidem! Adipisci debitis vero dolores illo.</p>
+                      <a href="{% url 'cause_list' %}">View Court</a>
+                   </div>
+                </div>
+          
+             </div>
+        </div>
     </div>
-    
+
 {% endblock content %}

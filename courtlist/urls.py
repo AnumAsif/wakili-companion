@@ -5,7 +5,8 @@ from django.conf.urls.static import static
 
 
 urlpatterns=[
-     url('^$',views.index, name = 'index'),
+     url(r'^$',views.index, name = 'index'),
+     url(r'^court/', views.cause_list, name='cause_list')
 ]
 
 if settings.DEBUG:
