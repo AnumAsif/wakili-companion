@@ -1,25 +1,30 @@
 from django.db import models
 
-# Create your models here.
 
-class lawyers(models.Model)
-    name = models.CharField(max_length=20,default='')
-    id = models.primarykey()
-class courts(models.Model)
-    Cname = models.CharField()
-    Cno = models.Foreignkey()
+class Lawyers(models.Model):
+    name = models.CharField(max_length=255)
 
-class courthearings(models.Model):
+
+class Courts(models.Model):
+    name = models.CharField(max_length=255)
+    number = models.PositiveIntegerField()
+
+
+class CourtHearings(models.Model):
     judge = models.TextField()
-    start_time = models.DateTimeField()
+    date = models.DateField()
+    start_time = models.TimeField()
+    court = models.ForeignKey(Courts, related_name='cause_list', null=True)
 
-class courtcasses(models.Model)
-    position = models.()
-    type = models.Charfield()
-    hearing = models.Foreignkey(courthearings, related_name='cases')
-    case = models.Foreignkey(casses)
 
-class casses(models.Model)
-    casenumber = models.Integerfield()
-    pleintiff = models.TextField()
+class Cases(models.Model):
+    case_id = models.TextField()
+    plaintiff = models.TextField()
     defendant = models.TextField()
+
+
+class HearingCases(models.Model):
+    position = models.PositiveIntegerField()
+    hearing_type = models.CharField(max_length=64)
+    hearing = models.ForeignKey(CourtHearings, related_name='cases')
+    case = models.ForeignKey(Cases)
