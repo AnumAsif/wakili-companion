@@ -92,7 +92,6 @@ class Scrape:
                     field = next(fields, None)
                     if field is None:
                         continue
-                    # print(field)
                     f = field[1]
                     while 'field' in f and f['field'] == 'case':
                         cases.append(f['data'])
@@ -105,7 +104,8 @@ class Scrape:
                 self.final_data['date'] = field['data']
                 field = next(fields, None)
             elif field['field'] == 'start_time':
-                self.final_data['start_time'] = field['data']
+                if self.final_data.get('start_time', None) is None:
+                    self.final_data['start_time'] = field['data']
                 field = next(fields, None)
             else:
                 field = next(fields, None)
