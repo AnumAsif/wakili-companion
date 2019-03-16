@@ -32,7 +32,7 @@ class Scrape:
                      r'SENTENCING|PRE TRIAL CONFERENCE|PLEA|SUBMISSION|HEARING|HEARING- MAIN SUIT)$'
         },
         'judge': {
-            'regex': r'(HON|D).? (?P<name>[ A-Za-z\.]+).*(?:COURT ?)?(?P<court>\d+)?.*?'
+            'regex': r'(?P<name>(?:[ A-Za-z\.]+|\([MRS/.]+?\))+)(?:.*COURT (?P<court>\d+))?.*'
         },
         'junk': {
             'regex': 'MILIMANI MAGISTRATE COURT|MAGISTRATE COURT CRIMINAL'
