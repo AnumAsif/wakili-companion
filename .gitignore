@@ -1,8 +1,7 @@
 virtual/
-
 .vscode/
-
 .env
-
 start.sh
-
+.idea
+.pyc
+__pycache__/
